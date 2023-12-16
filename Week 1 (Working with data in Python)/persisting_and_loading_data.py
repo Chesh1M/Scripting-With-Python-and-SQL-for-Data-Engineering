@@ -1,23 +1,23 @@
-'''
+
 ### Reading csv/sql files
 ### e.g. file w data "populate.sql"
 
 ## Method 1 (using open and close)
-sql_file = open("populate.sql")
+sql_file = open("/workspaces/Scripting-With-Python-and-SQL-for-Data-Engineering/Week 1 (Working with data in Python)/populate.sql")
 sql_contents = sql_file.readlines() # or read() but that will just read as one big chunk
 print(sql_contents)
 sql_file.close()
 
 ## Method 2 (using with)
-with open("population.sql") as sql_file:
+with open("/workspaces/Scripting-With-Python-and-SQL-for-Data-Engineering/Week 1 (Working with data in Python)/populate.sql") as sql_file:
     sql_contents = sql_file.readlines()
 
 ## Method 3 (using pandas)
 import pandas as pd
-df = pd.read_csv("wine-ratings-small.csv")
+df = pd.read_csv("/workspaces/Scripting-With-Python-and-SQL-for-Data-Engineering/Week 1 (Working with data in Python)/wine-ratings-small.csv")
 print(df.head())
 
-'''
+
 ### Working with JSON
 import json
 ## Conerting Python to JSON
@@ -30,12 +30,12 @@ loaded_json = json.loads(json_output) # <- this is a dictionary
 print(loaded_json)
 print(loaded_json['valid'])
 
-'''
+
 ## Example given a json file 'wine-ratings.json'
-with open('wine-ratings.json') as f:
+with open('/workspaces/Scripting-With-Python-and-SQL-for-Data-Engineering/Week 1 (Working with data in Python)/wine-ratings.json') as f:
     loaded_json = json.load(f)
 print(loaded_json) # <- dictionary from the json file 
-'''
+
 
 
 
