@@ -7,7 +7,7 @@ def main():
         print(f"Files: {files}\n")
 
 def list_abs_paths():
-    for root, directories, files in os.walk('..'):
+    for root, directories, files in os.walk('../../'):
         for _file in files:
             abs_path = os.path.join(root, _file)
             print(f"File path: {abs_path}")
