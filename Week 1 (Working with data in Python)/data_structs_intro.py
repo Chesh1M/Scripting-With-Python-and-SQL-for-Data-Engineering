@@ -4,7 +4,7 @@ import os
 # Initializing list containing directories of specified directory
 directories = os.listdir("/workspaces/Scripting-With-Python-and-SQL-for-Data-Engineering/Week 1 (Working with data in Python)")
 print(directories)
-print(directories.index("Data Structs in Python"))
+print(directories.index("useful_commands.py"))
 
 
 ### Using DICTIONARIES to save and retrieving data in python
