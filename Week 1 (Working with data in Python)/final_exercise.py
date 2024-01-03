@@ -1,7 +1,7 @@
 import json
 import os
 dir_path = '/workspaces/Scripting-With-Python-and-SQL-for-Data-Engineering/Week 1 (Working with data in Python)/'
-''' 
+'''
 ### (1) Serialize JSON from Python
 # From Python, convert a dictionary into a JSON string
 data = {"grape": "Cabernet Franc", "species": "Vitis vinifera", "origin": "Bordeaux, France"}
@@ -18,10 +18,12 @@ collection = [data, data]
 print(collection)
 # may look similar in the output, but the difference is that JSON is now a string
 print(json.dumps(collection))
-'''
 
+# now use the `.dump()` JSON method (note no 's'!) to save it to a new JSON file
+with open(dir_path+'sample.json', 'w') as f:
+    json.dump(collection, f)
 
-''' 
+ 
 ### (2) JSON Formatting
 ## It is common for HTTP APIs and JSON files to present JSON as a single line. In this section, you will use formatting options in the JSON module to improve the readability of nested information in JSON
 # define a nested data structure in a single line
@@ -34,8 +36,8 @@ print(data_as_json)
 # Try other variations like indenting 2 spaces and not sorting keys:
 data_as_json = json.dumps(grape_data, sort_keys=False, indent=2)
 print(data_as_json)
-'''
 
+'''
 
 
 ### (3) Serialize JSON from a file

@@ -1,4 +1,5 @@
 '''
+Week 2 project:
 Command line script to find the 10 largest files in the file system 
 based on the specified file extension (png, mp4, ipynb, py etc..)
 Uses in memory sqlite3 database and argparse
@@ -61,6 +62,10 @@ def main():
     args = parser.parse_args()
     return find_files_and_size(args.file_extension)
 
-
+'''
+if __name__ == '__main__':
+is useful because it ensures that this file can only be ran as a script
+and not used as an imported module
+'''
 if __name__ == '__main__':
     main()

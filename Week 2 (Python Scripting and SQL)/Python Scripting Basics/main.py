@@ -1,3 +1,8 @@
+'''
+Linked to 'python_scripting_basics.py 
+to show how __main__ and __name__ works
+'''
+
 print(f"Name of this file (main.py) is {__name__}")
 
 def test_func_success():
@@ -9,7 +14,6 @@ def test_func_fail():
 if __name__ == '__main__':
     print("\nSince '__name__' == '__main__' ")
     test_func_success()
-
 
 if __name__ != '__main__':
     print("\nSince '__name__' != '__main__' ")
