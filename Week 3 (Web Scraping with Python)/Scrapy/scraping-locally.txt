@@ -1,0 +1,20 @@
+Rather than providing the link to the website being scraped,
+we can download the website html and parse the file instead.
+- Faster processing speed
+
+1) Download the website html file
+    - cd into the spiders directory
+    - run 'wget <insert website link>'
+    - e.g. wget https://cve.mitre.org/data/refs/refmap/source-EXPLOIT-DB.html
+
+2) Edit the spider python executable's start url to the downloaded html file
+    E.g.: 
+    - import os 
+    - from os.path import dirname
+    - current_dir = os.path.dirname(__file__)
+    - url = os.path.join(current_dir, 'source-EXPLOIT-DB.html')
+
+    # Inside the class
+    - start_url = [f"file://{url}"]
+
+Run 'time scrapy crawl <spider name>' to see how much time is saved

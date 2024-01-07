@@ -1,0 +1,25 @@
+Storing the output of the spider into a database
+
+1) import sqlite3
+2) Setup database
+''' 
+connection = sqlite3.connect('vuln.db')
+table = 'CREATE TABLE vulns (exploit TEXT, cve TEXT)'
+cursor = connection.cursor()
+cursor.execute(table) 
+'''
+
+3) Instead of just printing out the data, insert them into the table
+'''
+exploit_id = row.xpath('td//text()')[0].extract()
+cve_id = row.xpath('td//text()')[2].extract()
+cursor.execute('INSERT INTO VULNS (exploit, cve) VALUES(?, ?)', (exploit_id, cve_id))
+connection.commit()
+count += 1
+'''
+
+4) Now we can access the database using sqlite3 terminal
+sqlite3 <insert database name here>
+
+- run sqlite queries as usual e.g. 'select * from <insert database name here>'
+- to exit sqlite3 terminal 'Ctrl + Z'
