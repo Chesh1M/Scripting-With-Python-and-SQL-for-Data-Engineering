@@ -79,9 +79,9 @@ Different databases have their own ways of exporting data. In MySQL databases yo
 
 ```
 $ mysqldump -u root -p ratings > vscode-mysql/export.sql
-
-**Eg. mysqldump -u sqluser -p ratings > export.sql**
+Eg. mysqldump -u sqluser -p ratings > export.sql
 ```
+
 
 Remember that the coursera database doesn't have a password for the `root` user. In a real-life scenario, you would have to type a password and perhaps use a specific user instead of using `root`.
 
